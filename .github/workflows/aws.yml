@@ -36,7 +36,7 @@ on:
 env:
   AWS_REGION: us-east-1
   ECR_REPOSITORY: demo_ecr_github
-  ECS_SERVICE: Demo_ecs_github
+  ECS_SERVICE: demo_ecsservice_github
   ECS_CLUSTER: Demo_ecs_github
   ECS_TASK_DEFINITION: task-definition.json
   CONTAINER_NAME: nginx
