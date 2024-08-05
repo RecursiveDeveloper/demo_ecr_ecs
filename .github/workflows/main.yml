@@ -16,10 +16,10 @@ jobs:
     with:
       aws-region: $AWS_REGION
 
-  cd_workflow:
-    needs: ci_workflow
-    uses: ./.github/workflows/cd.yml
-    with:
-      aws-region: $AWS_REGION
-      task-definition: $ECS_TASK_DEFINITION
-      output-ci-job: ${{ needs.ci_workflow.outputs.build-image }}
+  # cd_workflow:
+  #   needs: ci_workflow
+  #   uses: ./.github/workflows/cd.yml
+  #   with:
+  #     aws-region: $AWS_REGION
+  #     task-definition: $ECS_TASK_DEFINITION
+  #     output-ci-job: ${{ needs.ci_workflow.outputs.build-image }}
