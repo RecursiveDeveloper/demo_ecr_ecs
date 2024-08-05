@@ -21,4 +21,4 @@ runs:
       with:
         aws-access-key-id: ${{ inputs.aws-access-key }}
         aws-secret-access-key: ${{ inputs.aws-secret-key }}
-        aws-region: ${{ inputs.aws-region }}
+        aws-region: 'us-east-1'
