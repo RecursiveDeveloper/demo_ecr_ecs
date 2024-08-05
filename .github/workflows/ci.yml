@@ -19,7 +19,15 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v4
-      
+
+    - name: Display the path
+      shell: bash
+      run: ls -la ${{ GITHUB_WORKSPACE }}
+   
+    - name: Display the path
+      shell: bash
+      run: ls -la $GITHUB_WORKSPACE
+    
     - name: setup environment
       uses: ./.github/actions/setup.yml
       with:
