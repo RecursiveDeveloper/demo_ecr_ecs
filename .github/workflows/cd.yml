@@ -14,10 +14,15 @@ jobs:
     environment: Develop
 
     steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+
     - name: setup environment
       uses: ./.github/actions/demo-composite-action
       with:
         aws-region: ${{ vars.AWS_REGION }}
+        aws-access-key: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
     - name: Fill in the new image ID in the Amazon ECS task definition
       id: task-def
