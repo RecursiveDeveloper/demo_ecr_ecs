@@ -3,12 +3,6 @@ name: Deploy to Amazon ECS
 on: 
   workflow_call:
     inputs:
-      aws-region:
-        required: true
-        type: string
-      task-definition:
-        required: true
-        type: string
       output-ci-job:
         required: true
         type: string
@@ -23,13 +17,13 @@ jobs:
     - name: setup environment
       uses: ./.github/actions/demo-composite-action
       with:
-        aws-region: ${{ inputs.aws-region }}
+        aws-region: ${{ vars.AWS_REGION }}
 
     - name: Fill in the new image ID in the Amazon ECS task definition
       id: task-def
       uses: aws-actions/amazon-ecs-render-task-definition@v1
       with:
-        task-definition: ${{ inputs.task-definition }}
+        task-definition: ${{ vars.ECS_TASK_DEFINITION }}
         container-name: ${{ vars.CONTAINER_NAME }}
         image: ${{ inputs.output-ci-job }}
 

@@ -3,10 +3,6 @@ name: Workflow to deploy to Amazon ECS
 on: 
   workflow_dispatch:
 
-env:
-  AWS_REGION: us-east-1
-  ECS_TASK_DEFINITION: task-definition.json
-
 permissions:
   contents: read
 
@@ -14,13 +10,9 @@ jobs:
   ci_workflow:
     uses: ./.github/workflows/ci.yml
     secrets: inherit
-    with:
-      aws-region: $AWS_REGION
 
   # cd_workflow:
   #   needs: ci_workflow
   #   uses: ./.github/workflows/cd.yml
   #   with:
-  #     aws-region: $AWS_REGION
-  #     task-definition: $ECS_TASK_DEFINITION
   #     output-ci-job: ${{ needs.ci_workflow.outputs.build-image }}
