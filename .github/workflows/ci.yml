@@ -17,6 +17,9 @@ jobs:
       build-image: ${{ steps.build-image.outputs.image }}
 
     steps:
+    - name: Display the path
+      shell: bash
+      run: ls -la $GITHUB_WORKSPACE
     - name: setup environment
       uses: ./.github/actions/setup.yml
       with:
