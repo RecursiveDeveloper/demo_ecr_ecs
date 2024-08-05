@@ -17,12 +17,9 @@ jobs:
       build-image: ${{ steps.build-image.outputs.image }}
 
     steps:
-    - name: Display the path
-      shell: bash
-      run: pwd
-    - name: Display the path
-      shell: bash
-      run: ls -la /home/runner/work/demo_ecr_ecs/demo_ecr_ecs/
+    - name: Checkout
+      uses: actions/checkout@v4
+      
     - name: setup environment
       uses: ./.github/actions/setup.yml
       with:
