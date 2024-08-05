@@ -19,22 +19,25 @@ jobs:
     steps:
     - name: Display the path
       shell: bash
-      run: ls -la $GITHUB_WORKSPACE
+      run: pwd
+    - name: Display the path
+      shell: bash
+      run: ls -la /home/runner/work/demo_ecr_ecs/demo_ecr_ecs/
     - name: setup environment
       uses: ./.github/actions/setup.yml
       with:
         aws-region: ${{ inputs.aws-region }}
 
-    - name: Login to Amazon ECR
-      id: login-ecr
-      uses: aws-actions/amazon-ecr-login@v1
+    # - name: Login to Amazon ECR
+    #   id: login-ecr
+    #   uses: aws-actions/amazon-ecr-login@v1
 
-    - name: Build, tag, and push image to Amazon ECR
-      id: build-image
-      env:
-        ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-        IMAGE_TAG: ${{ github.sha }}
-      run: |
-        docker build -t $ECR_REGISTRY/${{ vars.ECR_REPOSITORY }}:$IMAGE_TAG .
-        docker push $ECR_REGISTRY/${{ vars.ECR_REPOSITORY }}:$IMAGE_TAG
-        echo "image=$ECR_REGISTRY/${{ vars.ECR_REPOSITORY }}:$IMAGE_TAG" >> $GITHUB_OUTPUT
+    # - name: Build, tag, and push image to Amazon ECR
+    #   id: build-image
+    #   env:
+    #     ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+    #     IMAGE_TAG: ${{ github.sha }}
+    #   run: |
+    #     docker build -t $ECR_REGISTRY/${{ vars.ECR_REPOSITORY }}:$IMAGE_TAG .
+    #     docker push $ECR_REGISTRY/${{ vars.ECR_REPOSITORY }}:$IMAGE_TAG
+    #     echo "image=$ECR_REGISTRY/${{ vars.ECR_REPOSITORY }}:$IMAGE_TAG" >> $GITHUB_OUTPUT
