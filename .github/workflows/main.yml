@@ -11,8 +11,8 @@ jobs:
     uses: ./.github/workflows/ci.yml
     secrets: inherit
 
-  # cd_workflow:
-  #   needs: ci_workflow
-  #   uses: ./.github/workflows/cd.yml
-  #   with:
-  #     output-ci-job: ${{ needs.ci_workflow.outputs.build-image }}
+  cd_workflow:
+    needs: ci_workflow
+    uses: ./.github/workflows/cd.yml
+    with:
+      output-ci-job: ${{ needs.ci_workflow.outputs.build-image }}
