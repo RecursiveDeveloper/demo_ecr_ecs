@@ -13,6 +13,7 @@ permissions:
 jobs:
   ci_workflow:
     uses: ./.github/workflows/ci.yml
+    secrets: inherit
     with:
       aws-region: $AWS_REGION
 
