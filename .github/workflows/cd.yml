@@ -21,7 +21,7 @@ jobs:
 
     steps:
     - name: setup environment
-      uses: ./.github/actions/setup.yml
+      uses: ./.github/actions/demo-composite-action
       with:
         aws-region: ${{ inputs.aws-region }}
 

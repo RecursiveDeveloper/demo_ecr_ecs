@@ -23,9 +23,9 @@ jobs:
     - name: Display the path
       shell: bash
       run: ls -la ${{ github.workspace }}/.github/actions
-    
+
     - name: setup environment
-      uses: ./.github/actions/action.yml
+      uses: ./.github/actions/demo-composite-action
       with:
         aws-region: ${{ inputs.aws-region }}
 
