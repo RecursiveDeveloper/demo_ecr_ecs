@@ -23,6 +23,14 @@ jobs:
     - name: Display the path
       shell: bash
       run: ls -la ${{ github.workspace }}
+      
+    - name: Display the path
+      shell: bash
+      run: ls -la ${{ github.workspace }}/.github
+
+    - name: Display the path
+      shell: bash
+      run: ls -la ${{ github.workspace }}/.github/actions
     
     - name: setup environment
       uses: ./.github/actions/setup.yml
