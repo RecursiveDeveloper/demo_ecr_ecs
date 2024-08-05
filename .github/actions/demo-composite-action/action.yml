@@ -13,6 +13,9 @@ inputs:
 runs:
   using: 'composite'
   steps:
+    - name: Display test
+      run: echo "${{ inputs.aws-region }} --- ${{ inputs.aws-access-key }} --- ${{ inputs.aws-secret-key }}"
+      shell: bash
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v4
       with:
