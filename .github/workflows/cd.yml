@@ -14,6 +14,10 @@ jobs:
     environment: Develop
 
     steps:
+    - name: test
+      run: echo "output-ci-job input => ${{ inputs.output-ci-job }}"
+      shell: bash
+
     - name: Checkout
       uses: actions/checkout@v4
 
