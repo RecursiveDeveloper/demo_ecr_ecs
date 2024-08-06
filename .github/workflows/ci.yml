@@ -10,7 +10,7 @@ jobs:
     environment: Develop
 
     outputs:
-      build-image: ${{ steps.build-image.outputs.image }}
+      build-image-path: ${{ steps.build-image.outputs.image }}
 
     steps:
     - name: Checkout
@@ -36,7 +36,7 @@ jobs:
         docker build -t $ECR_REGISTRY/${{ vars.ECR_REPOSITORY }}:$IMAGE_TAG .
         docker push $ECR_REGISTRY/${{ vars.ECR_REPOSITORY }}:$IMAGE_TAG
         echo "image=$ECR_REGISTRY/${{ vars.ECR_REPOSITORY }}:$IMAGE_TAG" >> $GITHUB_OUTPUT
-        echo "Image variable => $image"
+
     - name: test
       run: echo "build-image output => ${{ steps.build-image.outputs.image }}"
       shell: bash
