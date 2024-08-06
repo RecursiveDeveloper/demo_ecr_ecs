@@ -16,4 +16,4 @@ jobs:
     uses: ./.github/workflows/cd.yml
     secrets: inherit
     with:
-      output-ci-job: ${{ needs.ci_workflow.outputs.build-image-path }}
+      output-ci-job: ${{needs.ci_workflow.outputs.build-image-path}}
