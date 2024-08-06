@@ -2,6 +2,10 @@ name: Build and push image to ECR
 
 on: 
   workflow_call:
+    outputs:
+      image:
+        description: "Image ID saved in ECR"
+        value: ${{ jobs.deploy_image_ECR.outputs.build-image-output }}
 
 jobs:
   deploy_image_ECR:
@@ -10,7 +14,7 @@ jobs:
     environment: Develop
 
     outputs:
-      build-image-path: ${{ steps.build-image.outputs.image }}
+      build-image-output: ${{ steps.build-image.outputs.image }}
 
     steps:
     - name: Checkout
