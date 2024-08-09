@@ -49,8 +49,6 @@ To deploy this project run
 3. Click on Run Workflow and be sure to be in the main branch
 4. That's it!
 
-For more informations about vagrant commands check [vagrant-cheat-sheet](https://gist.github.com/wpscholar/a49594e2e2b918f4d0c4)
-
 ## Authors
 
 - [@RecursiveDeveloper](https://github.com/RecursiveDeveloper)
