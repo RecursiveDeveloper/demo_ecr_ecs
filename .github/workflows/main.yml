@@ -8,6 +8,7 @@ on:
       - 'releases/**'
     paths-ignore:
       - '.github/**'
+      - 'README.*'
 
 permissions:
   contents: read
