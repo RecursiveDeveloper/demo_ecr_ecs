@@ -2,6 +2,12 @@ name: Workflow to deploy to Amazon ECS
 
 on: 
   workflow_dispatch:
+  push:
+    branches:
+      - 'main'
+      - 'releases/**'
+    paths-ignore:
+      - '.github/**'
 
 permissions:
   contents: read
