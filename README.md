@@ -35,7 +35,7 @@ Deploy a simple GitHub actions CI/CD Workflow into AWS ECR and ECS services. It 
 2. Check the repository settings and look for Environment option. Set up those variables according to your needs. They have to match with the name of the aws services you create. 
 2. Create your own ECR repository [Creating an Amazon ECR private repository
 ](https://docs.aws.amazon.com/AmazonECR/latest/userguide/repository-create.html)
-3. Create your own ECS cluster, task definition skeleton file and ECS service where tasks will be orchestrated  
+3. Create your own ECS cluster, task definition file (copy and paste the task-definition.json file stored within this repository inside task definition creation from json in AWS) and ECS service where tasks will be orchestrated  
     - Guide 1: [How to create an Amazon ECS Linux task for the Fargate launch type](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/getting-started-fargate.html)
     - Guide 2: [Deploying to Amazon Elastic Container Service
 ](https://docs.github.com/es/actions/use-cases-and-examples/deploying/deploying-to-amazon-elastic-container-service)
