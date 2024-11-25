@@ -2,7 +2,7 @@
     "containerDefinitions": [
         {
             "name": "nginx",
-            "image": "",
+            "image": "change_me",
             "cpu": 1024,
             "memory": 2048,
             "portMappings": [
