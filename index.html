@@ -6,10 +6,18 @@
 html { color-scheme: light dark; }
 body { width: 35em; margin: 0 auto;
 font-family: Tahoma, Verdana, Arial, sans-serif; }
+.container {
+    width: 300px;
+    height: 200px;
+    background-color: #0a0a23;
+}
+.container img {
+    width: 600px;
+}
 </style>
 </head>
 <body>
-<h1>You've made it!!</h1>
+<h1>You made it!!</h1>
 <p>If you see this page, the nginx web server is successfully installed and
 working. Further configuration is required.</p>
 
@@ -20,9 +28,8 @@ Commercial support is available at
 
 <p><em>Thank you for using nginx.</em></p>
 
-<div class="card">
+<div class="container">
     <img src="https://raw.githubusercontent.com/RecursiveDeveloper/static-media-content/main/Demo_ecs-ecr.drawio.png">
-    <h3>AWS ECR & ECS deploy with GitHub actions</h3>
 </div>
 
 </body>
