@@ -22,7 +22,7 @@ I'm a junior DevOps engineer with some expertise in BackEnd development using Ja
 
 Deploy a simple GitHub actions CI/CD Workflow into AWS ECR and ECS services. It consists of a Dockerfile to build a Nginx image where an index.html file will be stored in order to display a static web page using ECS as the server by proving a task-definition.json file with all the necessary configurations and ECR as the image registry once the image has been built and pushed.
 
-![image](https://raw.githubusercontent.com/RecursiveDeveloper/static-media-content/main/Demo_ecs-ecr.drawio.png)
+![image](https://raw.githubusercontent.com/RecursiveDeveloper/static-media-content/refs/heads/main/Ecs_Ecr-Diagram.png)
 
 ## Tech Stack 
 
